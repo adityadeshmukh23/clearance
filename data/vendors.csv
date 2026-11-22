@@ -1,0 +1,7 @@
+vendor_id,legal_name,aliases,tax_id,status,status_note,payment_terms,currency,bank_name,bank_account,bank_routing,email,phone,address
+V-1001,"Halden Industrial Supply, Inc.",Halden Industrial|Halden Supply|HIS Inc,84-2917365,approved,,Net 30,USD,First Meridian Bank,000123456789,021000089,ar@haldensupply.example,+1 312 555 0142,"2100 Foundry Row|Chicago, IL 60608"
+V-1002,Meridian Office Solutions LLC,Meridian Office|Meridian Office Solutions,47-5521904,approved,,Net 45,USD,Lakeshore Trust,004455667788,071000013,billing@meridianoffice.example,+1 415 555 0188,"415 Mission Park Dr|San Francisco, CA 94105"
+V-1003,Brightline Consulting Group LLP,Brightline Consulting|Brightline CG,61-3380127,approved,,Net 30,USD,Summit Commerce Bank,009900112233,122000247,accounts@brightlinecg.example,+1 617 555 0119,"77 Beacon Quay, Suite 12|Boston, MA 02110"
+V-1004,Kestrel Facilities Services Inc.,Kestrel Facilities|Kestrel FS,23-9084412,approved,,Net 30,USD,Harbor National,007766554433,031100209,ar@kestrelfs.example,+1 614 555 0163,"1200 Lantern Way|Columbus, OH 43201"
+V-1005,Apex Packaging Co.,Apex Packaging|Apex Pack,38-7745021,approved,,Net 60,USD,Pioneer Savings & Trust,002200330044,043000096,finance@apexpackaging.example,+1 216 555 0127,"9 Industrial Pkwy|Cleveland, OH 44114"
+V-1006,Orion Freight Lines Ltd.,Orion Freight|Orion Lines,55-1029384,blocked,Compliance hold - sanctions screening pending since 2026-10-30,Net 30,USD,Continental Bank,005544332211,061000104,billing@orionfreight.example,+1 713 555 0175,"4400 Gulf Terminal Rd|Houston, TX 77012"

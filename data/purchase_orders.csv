@@ -1,0 +1,29 @@
+po_number,vendor_id,issue_date,currency,tax_rate_pct,status,buyer,cost_center,description
+PO-4498,V-1001,2026-09-30,USD,8.25,closed,R. Whitfield,CC-210 Maintenance,Steel plate and bolt kits
+PO-4501,V-1001,2026-10-20,USD,8.25,open,R. Whitfield,CC-210 Maintenance,"Bearings, gasket kits, lubricant"
+PO-4502,V-1001,2026-10-22,USD,8.25,open,R. Whitfield,CC-210 Maintenance,Ball valves and elbow fittings
+PO-4503,V-1001,2026-10-27,USD,8.25,open,R. Whitfield,CC-210 Maintenance,Cutting inserts and tool holders
+PO-4510,V-1002,2026-10-18,USD,7.0,open,L. Okafor,CC-115 Facilities,"Workstation furniture, 14 seats"
+PO-4511,V-1002,2026-10-25,USD,7.0,open,L. Okafor,CC-115 Facilities,Toner and copier paper
+PO-4530,V-1003,2026-09-15,USD,8.25,open,A. Brandt,CC-340 Finance Transformation,"Advisory services, Phase 2 (fixed fee)"
+PO-4540,V-1004,2026-09-28,USD,0.0,open,L. Okafor,CC-115 Facilities,Facilities maintenance Q4 2026
+PO-4541,V-1004,2026-10-05,USD,0.0,open,L. Okafor,CC-115 Facilities,Seasonal grounds services
+PO-4560,V-1005,2026-09-10,USD,0.0,open,D. Marchetti,CC-520 Packaging Line 2,Custom packaging line (milestone billing)
+PO-4580,V-1006,2026-10-12,USD,0.0,open,D. Marchetti,CC-520 Packaging Line 2,"Inbound freight, Q4"
+PO-4301,V-1001,2026-10-11,USD,8.25,open,R. Whitfield,CC-210 Maintenance,Background PO 4301
+PO-4302,V-1001,2026-10-04,USD,8.25,open,R. Whitfield,CC-210 Maintenance,Background PO 4302
+PO-4303,V-1001,2026-10-03,USD,8.25,open,R. Whitfield,CC-210 Maintenance,Background PO 4303
+PO-4304,V-1002,2026-10-14,USD,7.0,open,L. Okafor,CC-115 Facilities,Background PO 4304
+PO-4305,V-1002,2026-10-19,USD,7.0,open,L. Okafor,CC-115 Facilities,Background PO 4305
+PO-4306,V-1002,2026-10-18,USD,7.0,open,L. Okafor,CC-115 Facilities,Background PO 4306
+PO-4307,V-1004,2026-10-19,USD,0.0,open,L. Okafor,CC-115 Facilities,Background PO 4307
+PO-4308,V-1004,2026-10-04,USD,0.0,open,L. Okafor,CC-115 Facilities,Background PO 4308
+PO-4309,V-1004,2026-10-11,USD,0.0,open,L. Okafor,CC-115 Facilities,Background PO 4309
+PO-4310,V-1005,2026-10-06,USD,0.0,open,D. Marchetti,CC-520 Packaging Line 2,Background PO 4310
+PO-4311,V-1005,2026-10-15,USD,0.0,open,D. Marchetti,CC-520 Packaging Line 2,Background PO 4311
+PO-4312,V-1005,2026-10-06,USD,0.0,open,D. Marchetti,CC-520 Packaging Line 2,Background PO 4312
+PO-4313,V-1003,2026-10-11,USD,8.25,open,A. Brandt,CC-340 Finance Transformation,Advisory services - Phase 1 (fixed fee)
+PO-4314,V-1003,2026-10-12,USD,8.25,open,A. Brandt,CC-340 Finance Transformation,Process review workshop series
+PO-4315,V-1003,2026-10-16,USD,8.25,open,A. Brandt,CC-340 Finance Transformation,Controls assessment - fixed fee
+PO-4316,V-1005,2026-10-05,USD,0.0,open,D. Marchetti,CC-520 Packaging Line 2,Automated palletiser cell (milestone billing)
+PO-4317,V-1001,2026-10-08,USD,8.25,open,R. Whitfield,CC-210 Maintenance,Hydraulic spares (partial delivery)

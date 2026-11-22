@@ -1,0 +1,341 @@
+[
+  {
+    "id": "S01",
+    "title": "Happy path - clean digital invoice",
+    "group": "happy",
+    "file": "S01_clean-digital-invoice.pdf",
+    "expect": "APPROVE",
+    "blurb": "Itemised PDF, every line matches PO-4501 and the goods receipt. Straight-through approval.",
+    "tags": [
+      "happy path",
+      "3-way match"
+    ],
+    "after": null,
+    "truth": {
+      "vendor": "Halden Industrial Supply, Inc.",
+      "invoice_number": "INV-20418",
+      "invoice_date": "2026-11-04",
+      "po": "PO-4501",
+      "total": 5702.61,
+      "subtotal": 5268.0,
+      "tax": 434.61,
+      "lines": 3,
+      "scanned": false
+    }
+  },
+  {
+    "id": "S02",
+    "title": "Within tolerance - chair price +1.1%",
+    "group": "tolerance",
+    "file": "S02_chair-price-1-1.pdf",
+    "expect": "APPROVE",
+    "blurb": "Different vendor layout and label vocabulary ('Bill No', 'Your Ref'). One unit price is 1.1% over PO, inside the 2% tolerance, so it passes with a note.",
+    "tags": [
+      "tolerance",
+      "different layout"
+    ],
+    "after": null,
+    "truth": {
+      "vendor": "Meridian Office Solutions LLC",
+      "invoice_number": "MO-55318",
+      "invoice_date": "2026-11-06",
+      "po": "PO-4510",
+      "total": 9945.22,
+      "subtotal": 9294.6,
+      "tax": 650.62,
+      "lines": 3,
+      "scanned": false
+    }
+  },
+  {
+    "id": "S03",
+    "title": "Bundled, tax-inclusive services invoice",
+    "group": "layout",
+    "file": "S03_bundled-tax-inclusive-services-invoice.pdf",
+    "expect": "APPROVE",
+    "blurb": "One bundled line, tax embedded in the price, PO number only mentioned inside the description. The process derives the net amount and matches at header level.",
+    "tags": [
+      "bundled lines",
+      "tax embedded",
+      "implied PO text"
+    ],
+    "after": null,
+    "truth": {
+      "vendor": "Brightline Consulting Group LLP",
+      "invoice_number": "BCG-0912",
+      "invoice_date": "2026-11-02",
+      "po": "PO-4530",
+      "total": 19485.0,
+      "subtotal": 18000.0,
+      "tax": 1485.0,
+      "lines": 1,
+      "scanned": false
+    }
+  },
+  {
+    "id": "E1a",
+    "title": "EDGE 1a - Scanned, number smudged, no PO printed",
+    "group": "edge1",
+    "file": "E1a_scanned-number-smudged-no-po-printed_scan.pdf",
+    "expect": "HOLD",
+    "blurb": "Skewed scan, invoice number blotted out, no PO reference. OCR the document, infer the PO from vendor + line items, hold for the missing number and draft the vendor email.",
+    "tags": [
+      "scanned image",
+      "missing field",
+      "implied PO",
+      "vendor email"
+    ],
+    "after": null,
+    "truth": {
+      "vendor": "Kestrel Facilities Services Inc.",
+      "invoice_number": null,
+      "invoice_date": "2026-11-03",
+      "po": null,
+      "total": 3675.0,
+      "subtotal": 3675.0,
+      "tax": 0.0,
+      "lines": 2,
+      "scanned": true
+    }
+  },
+  {
+    "id": "E1b",
+    "title": "EDGE 1b - Vendor resubmits with the number",
+    "group": "edge1",
+    "file": "E1b_vendor-resubmits-with-the-number.pdf",
+    "expect": "APPROVE",
+    "blurb": "Run after 1a. Same invoice, now legible. It must NOT be flagged as a duplicate: it supersedes the held run and gets approved.",
+    "tags": [
+      "resubmission",
+      "supersedes held run"
+    ],
+    "after": "E1a",
+    "truth": {
+      "vendor": "Kestrel Facilities Services Inc.",
+      "invoice_number": "KFS-1187",
+      "invoice_date": "2026-11-03",
+      "po": "PO-4540",
+      "total": 3675.0,
+      "subtotal": 3675.0,
+      "tax": 0.0,
+      "lines": 2,
+      "scanned": false
+    }
+  },
+  {
+    "id": "E2a",
+    "title": "EDGE 2a - Milestone 2 of 3 against PO-4560",
+    "group": "edge2",
+    "file": "E2a_milestone-2-of-3-against-po-4560.pdf",
+    "expect": "APPROVE",
+    "blurb": "Partial billing. $14,400 was already paid, this adds $19,200 and leaves $14,400 on the PO. Approved, and the PO balance is updated.",
+    "tags": [
+      "split billing",
+      "stateful"
+    ],
+    "after": null,
+    "truth": {
+      "vendor": "Apex Packaging Co.",
+      "invoice_number": "APX-2026-044",
+      "invoice_date": "2026-11-05",
+      "po": "PO-4560",
+      "total": 19200.0,
+      "subtotal": 19200.0,
+      "tax": 0.0,
+      "lines": 1,
+      "scanned": false
+    }
+  },
+  {
+    "id": "E2b",
+    "title": "EDGE 2b - Final milestone pushes PO over budget",
+    "group": "edge2",
+    "file": "E2b_final-milestone-pushes-po-over-budget.pdf",
+    "expect": "ESCALATE",
+    "blurb": "Run after 2a. On its own this invoice would fit the PO, but cumulatively it overbills by $5,400. Only visible because the process remembers earlier runs.",
+    "tags": [
+      "split billing",
+      "cumulative overbilling"
+    ],
+    "after": "E2a",
+    "truth": {
+      "vendor": "Apex Packaging Co.",
+      "invoice_number": "APX-2026-051",
+      "invoice_date": "2026-11-12",
+      "po": "PO-4560",
+      "total": 19800.0,
+      "subtotal": 19800.0,
+      "tax": 0.0,
+      "lines": 1,
+      "scanned": false
+    }
+  },
+  {
+    "id": "E3",
+    "title": "EDGE 3 - Re-scanned duplicate, different number format",
+    "group": "edge3",
+    "file": "E3_re-scanned-duplicate-different-number-format_scan.jpg",
+    "expect": "REJECT",
+    "blurb": "Photo-quality JPG of INV-20377, already paid on 8 Nov, resent as '20377-A'. New file hash, new number string, same invoice. Caught by fuzzy fingerprint.",
+    "tags": [
+      "duplicate",
+      "image upload",
+      "fuzzy match"
+    ],
+    "after": null,
+    "truth": {
+      "vendor": "Halden Industrial Supply, Inc.",
+      "invoice_number": "20377-A",
+      "invoice_date": "2026-10-14",
+      "po": "PO-4498",
+      "total": 3918.65,
+      "subtotal": 3620.0,
+      "tax": 298.65,
+      "lines": 2,
+      "scanned": true
+    }
+  },
+  {
+    "id": "E4",
+    "title": "EDGE 4 - Bank details changed (fraud signal)",
+    "group": "edge4",
+    "file": "E4_bank-details-changed-fraud-signal.pdf",
+    "expect": "ESCALATE",
+    "blurb": "Numbers match the PO perfectly, but the bank account differs from the vendor master, the invoice announces new remittance details, and the contact email is a look-alike domain. Payment is blocked and routed to treasury for a callback.",
+    "tags": [
+      "payment fraud",
+      "bank change",
+      "look-alike domain"
+    ],
+    "after": null,
+    "truth": {
+      "vendor": "Meridian Office Solutions LLC",
+      "invoice_number": "MO-55871",
+      "invoice_date": "2026-11-09",
+      "po": "PO-4511",
+      "total": 7597.0,
+      "subtotal": 7100.0,
+      "tax": 497.0,
+      "lines": 2,
+      "scanned": false
+    }
+  },
+  {
+    "id": "X1",
+    "title": "Unknown vendor",
+    "group": "extra",
+    "file": "X1_unknown-vendor.pdf",
+    "expect": "REJECT",
+    "blurb": "Vendor is not in the approved master and there is no PO. Cannot pay, refer to onboarding.",
+    "tags": [
+      "vendor master"
+    ],
+    "after": null,
+    "truth": {
+      "vendor": "Silverline Trading Co.",
+      "invoice_number": "SLT-3302",
+      "invoice_date": "2026-11-10",
+      "po": null,
+      "total": 2750.0,
+      "subtotal": 2750.0,
+      "tax": 0.0,
+      "lines": 1,
+      "scanned": false
+    }
+  },
+  {
+    "id": "X2",
+    "title": "Blocked vendor (compliance hold)",
+    "group": "extra",
+    "file": "X2_blocked-vendor-compliance-hold.pdf",
+    "expect": "REJECT",
+    "blurb": "Everything else is clean, but the vendor is on compliance hold. Hard stop.",
+    "tags": [
+      "vendor master",
+      "compliance"
+    ],
+    "after": null,
+    "truth": {
+      "vendor": "Orion Freight Lines Ltd.",
+      "invoice_number": "OFL-90417",
+      "invoice_date": "2026-11-07",
+      "po": "PO-4580",
+      "total": 6420.0,
+      "subtotal": 6420.0,
+      "tax": 0.0,
+      "lines": 1,
+      "scanned": false
+    }
+  },
+  {
+    "id": "X3",
+    "title": "Billed more than received, price +4%",
+    "group": "extra",
+    "file": "X3_billed-more-than-received-price-4.pdf",
+    "expect": "ESCALATE",
+    "blurb": "3-way match failure: 100 valves billed, 80 received, and the unit price is 4% above PO. Two independent findings.",
+    "tags": [
+      "3-way match",
+      "price variance"
+    ],
+    "after": null,
+    "truth": {
+      "vendor": "Halden Industrial Supply, Inc.",
+      "invoice_number": "INV-20431",
+      "invoice_date": "2026-11-10",
+      "po": "PO-4502",
+      "total": 6217.88,
+      "subtotal": 5744.0,
+      "tax": 473.88,
+      "lines": 2,
+      "scanned": false
+    }
+  },
+  {
+    "id": "X4",
+    "title": "Not an invoice (account statement)",
+    "group": "extra",
+    "file": "X4_not-an-invoice-account-statement.pdf",
+    "expect": "REJECT",
+    "blurb": "Vendors often email statements into the AP inbox. Classified as a non-invoice and returned, nothing is paid from it.",
+    "tags": [
+      "classification"
+    ],
+    "after": null,
+    "truth": {
+      "vendor": "Meridian Office Solutions LLC",
+      "invoice_number": null,
+      "invoice_date": "2026-11-15",
+      "po": null,
+      "total": null,
+      "subtotal": 0,
+      "tax": 0.0,
+      "lines": 0,
+      "scanned": false
+    }
+  },
+  {
+    "id": "X5",
+    "title": "Hidden instruction in the PDF (prompt injection)",
+    "group": "extra",
+    "file": "X5_hidden-instruction-in-the-pdf-prompt-injection.pdf",
+    "expect": "ESCALATE",
+    "blurb": "Numbers are perfect, but white text hidden in the page tries to instruct an AI reviewer. The model only extracts, rules decide, and the hidden text is itself a finding.",
+    "tags": [
+      "prompt injection",
+      "security"
+    ],
+    "after": null,
+    "truth": {
+      "vendor": "Halden Industrial Supply, Inc.",
+      "invoice_number": "INV-20440",
+      "invoice_date": "2026-11-11",
+      "po": "PO-4503",
+      "total": 2052.42,
+      "subtotal": 1896.0,
+      "tax": 156.42,
+      "lines": 2,
+      "scanned": false
+    }
+  }
+]

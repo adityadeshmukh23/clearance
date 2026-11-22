@@ -1,0 +1,4 @@
+invoice_id,vendor_id,invoice_number,invoice_date,po_number,net,tax,total,currency,status,paid_date,lines_json
+H-0001,V-1001,INV-20377,2026-10-14,PO-4498,3620.0,298.65,3918.65,USD,paid,2026-11-08,"[[1, 40, 2720.0], [2, 36, 900.0]]"
+H-0002,V-1004,KFS-1163,2026-10-02,PO-4540,3200.0,0.0,3200.0,USD,paid,2026-10-30,"[[1, 1, 3200.0]]"
+H-0003,V-1005,APX-2026-031,2026-09-19,PO-4560,14400.0,0.0,14400.0,USD,paid,2026-10-20,"[[1, 0, 14400.0]]"

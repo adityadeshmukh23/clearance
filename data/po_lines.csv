@@ -1,0 +1,64 @@
+po_number,line_no,sku,description,qty_ordered,unit_price,qty_received,needs_receipt
+PO-4498,1,HIS-PLT-12,"Steel plate 12mm, 4x8 ft",40,68.0,40,1
+PO-4498,2,HIS-BLT-M10,Bolt kit M10 (assorted),36,25.0,36,1
+PO-4501,1,HIS-BRG-204,Ball bearing 204 series,200,12.5,200,1
+PO-4501,2,HIS-GSK-118,Flange gasket kit,50,34.0,50,1
+PO-4501,3,HIS-LUB-5G,Industrial lubricant 5 gal,12,89.0,12,1
+PO-4502,1,HIS-VLV-310,"Ball valve 3 in, stainless",100,46.0,80,1
+PO-4502,2,HIS-FIT-90,Elbow fitting 90 deg,300,3.2,300,1
+PO-4503,1,HIS-INS-CNMG,Carbide cutting insert CNMG,120,9.8,120,1
+PO-4503,2,HIS-HLD-MCL,Tool holder MCLN,10,72.0,10,1
+PO-4510,1,MOS-DSK-120,Sit-stand desk 120 cm,14,389.0,14,1
+PO-4510,2,MOS-CHR-ERG,Ergonomic task chair,14,214.5,14,1
+PO-4510,3,MOS-MON-27,"Monitor arm, dual",14,58.0,14,1
+PO-4511,1,MOS-TNR-55A,Toner cartridge 55A,40,62.0,40,1
+PO-4511,2,MOS-PPR-A4,"Copier paper A4, case of 5 reams",120,38.5,120,1
+PO-4530,1,BCG-ADV-P2,Advisory services - Phase 2 (fixed fee),1,18000.0,1,0
+PO-4540,1,KFS-MNT-M,Monthly facilities maintenance,3,3200.0,3,0
+PO-4540,2,KFS-HVAC-F,HVAC filter replacement set (quarterly),2,475.0,2,0
+PO-4541,1,KFS-LAND-L,Leaf removal and grounds clean-up visit,4,650.0,4,0
+PO-4541,2,KFS-SNOW-R,Snow plow contract retainer (season),1,1800.0,1,0
+PO-4560,1,APX-LINE-CP,Custom packaging line - tooling and production (lump sum),1,48000.0,1,0
+PO-4580,1,OFL-FRT-Q4,Inbound freight services Q4,1,6420.0,1,0
+PO-4301,1,HIS-SEAL-40,Oil seal 40 mm,40,6.75,40,1
+PO-4301,2,HIS-CHN-10,"Roller chain 10B-1, 10 ft",300,37.5,300,1
+PO-4301,3,HIS-CPL-25,Shaft coupling 25 mm,200,58.0,200,1
+PO-4302,1,HIS-FLT-HY,Hydraulic filter element,200,41.2,200,1
+PO-4302,2,HIS-SPR-22,Drive sprocket 22T,60,29.9,60,1
+PO-4302,3,HIS-CPL-25,Shaft coupling 25 mm,40,58.0,40,1
+PO-4303,1,HIS-CHN-10,"Roller chain 10B-1, 10 ft",60,37.5,60,1
+PO-4303,2,HIS-GRS-14,Grease cartridge 14 oz (case),40,48.0,40,1
+PO-4303,3,HIS-CPL-25,Shaft coupling 25 mm,200,58.0,200,1
+PO-4304,1,MOS-LMP-LED,LED desk lamp,60,24.9,60,1
+PO-4304,2,MOS-HDS-USB,USB headset,250,52.0,250,1
+PO-4304,3,MOS-STP-HD,Heavy-duty stapler,250,18.4,250,1
+PO-4305,1,MOS-LMP-LED,LED desk lamp,40,24.9,40,1
+PO-4305,2,MOS-HDS-USB,USB headset,60,52.0,60,1
+PO-4305,3,MOS-KBD-ERG,Ergonomic keyboard,40,79.0,40,1
+PO-4306,1,MOS-CAB-4D,4-drawer filing cabinet,60,142.0,60,1
+PO-4306,2,MOS-WBD-90,Whiteboard 90x120 cm,200,67.5,200,1
+PO-4306,3,MOS-KBD-ERG,Ergonomic keyboard,40,79.0,40,1
+PO-4307,1,,Carpet deep clean (per floor),2,540.0,2,0
+PO-4307,2,,Fire extinguisher inspection,3,310.0,3,0
+PO-4307,3,,Window cleaning - quarterly,4,880.0,4,0
+PO-4308,1,,Window cleaning - quarterly,3,880.0,3,0
+PO-4308,2,,Carpet deep clean (per floor),6,540.0,6,0
+PO-4308,3,,Fire extinguisher inspection,6,310.0,6,0
+PO-4309,1,,Fire extinguisher inspection,4,310.0,4,0
+PO-4309,2,,Carpet deep clean (per floor),4,540.0,4,0
+PO-4309,3,,Pest control visit,3,260.0,3,0
+PO-4310,1,APX-PAD-F,Foam padding sheet,200,9.4,200,1
+PO-4310,2,APX-CRT-L,"Corrugated carton, large (pack of 50)",120,118.0,120,1
+PO-4310,3,APX-PAL-STD,"Standard pallet, wooden",80,14.8,80,1
+PO-4311,1,APX-TAPE-48,Packing tape 48 mm (case of 36),40,52.0,40,1
+PO-4311,2,APX-PAL-STD,"Standard pallet, wooden",200,14.8,200,1
+PO-4311,3,APX-CRT-L,"Corrugated carton, large (pack of 50)",120,118.0,120,1
+PO-4312,1,APX-TAPE-48,Packing tape 48 mm (case of 36),120,52.0,120,1
+PO-4312,2,APX-CRT-L,"Corrugated carton, large (pack of 50)",40,118.0,40,1
+PO-4312,3,APX-PAD-F,Foam padding sheet,250,9.4,250,1
+PO-4313,1,BCG-FEE,Advisory services - Phase 1 (fixed fee),1,9000.0,1,0
+PO-4314,1,BCG-FEE,Process review workshop series,1,12500.0,1,0
+PO-4315,1,BCG-FEE,Controls assessment - fixed fee,1,6400.0,1,0
+PO-4316,1,APX-PLT-CELL,Automated palletiser cell - installation and commissioning (lump sum),1,62000.0,1,0
+PO-4317,1,HIS-HYD-PMP,Hydraulic gear pump,50,214.0,30,1
+PO-4317,2,HIS-HYD-HOSE,Hydraulic hose assembly 1 m,120,22.5,120,1

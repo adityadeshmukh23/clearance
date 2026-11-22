@@ -1,0 +1,8 @@
+**/__pycache__
+runtime
+tests
+tools
+docs
+*.md
+.env
+.git

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clearance - invoice desk</title>
+<link rel="preload" href="/static/fonts/archivo-wdth.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/static/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2317202e'/%3E%3Cpath d='M8 17l5.5 5.5L24 10' fill='none' stroke='%23fff' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="bar">
+  <a class="brand" href="#/desk" aria-label="Clearance home"><b>Clearance</b><span>Invoice desk</span></a>
+  <nav class="nav" aria-label="Main">
+    <a href="#/desk" data-nav="desk">Desk</a>
+    <a href="#/ledger" data-nav="ledger">Ledger<span class="count hidden" id="reviewCount" title="Runs waiting for a person"></span></a>
+    <a href="#/reference" data-nav="reference">Reference data</a>
+    <a href="#/about" data-nav="about">How it works</a>
+  </nav>
+  <div class="bar-right">
+    <button class="chip" id="aiChip" title="Check the AI connection"><span class="dot" id="aiDot"></span><span class="lbl" id="aiLbl">Checking reader…</span></button>
+    <button class="btn-ghost-light" id="resetBtn" title="Delete today's runs and restore the seeded history">Reset demo</button>
+  </div>
+</header>
+<main id="view" tabindex="-1"></main>
+<div class="tip" id="tip" role="tooltip"></div>
+<div class="toasts" id="toasts" aria-live="polite"></div>
+<script src="/static/js/util.js"></script>
+<script src="/static/js/charts.js"></script>
+<script src="/static/js/case.js"></script>
+<script src="/static/js/desk.js"></script>
+<script src="/static/js/ledger.js"></script>
+<script src="/static/js/pages.js"></script>
+<script src="/static/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+# Render blueprint: free web service built from the Dockerfile.
+services:
+  - type: web
+    name: clearance
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/system
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false        # paste your free Google AI Studio key in the Render dashboard
+      - key: STAGE_MIN_MS
+        value: "550"
